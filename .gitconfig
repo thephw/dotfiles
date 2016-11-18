@@ -1,0 +1,27 @@
+[alias]
+co = checkout
+ci = commit
+rb = rebase
+s = status
+assume   = update-index --assume-unchanged
+unassume = update-index --no-assume-unchanged
+assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+[merge]
+	tool = opendiff
+[push]
+	default = simple
+[user]
+	name = Patrick Wiseman
+	email = patrick@calendly.com
+	signingkey = C02F2775
+
+[hub]
+protocol = ssh
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+
+[core]
+excludesfile = /opt/boxen/config/git/gitignore
+[commit]
+	gpgsign = true
