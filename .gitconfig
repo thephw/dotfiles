@@ -18,10 +18,5 @@ assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 [hub]
 protocol = ssh
 
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
-
-[core]
-excludesfile = /opt/boxen/config/git/gitignore
 [commit]
 	gpgsign = true
