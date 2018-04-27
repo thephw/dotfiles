@@ -1,23 +1,27 @@
 [alias]
-co = checkout
-ci = commit
-rb = rebase
-s = status
-assume   = update-index --assume-unchanged
-unassume = update-index --no-assume-unchanged
-assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+	co = checkout
+	ci = commit
+	rb = rebase
+	s = status
+	assume   = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 	praise = blame
-[merge]
-	tool = opendiff
+[diff]
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [push]
 	default = simple
 [user]
 	name = Patrick Wiseman
-	email = patrick@calendly.com
-	signingkey = C02F2775
-
+	email = patrick@deft.services
+	signingkey = 041AC406E6E86DFD
 [hub]
-protocol = ssh
-
+	protocol = ssh
 [commit]
 	gpgsign = true
+[credential]
+	helper = osxkeychain
+[core]
+	editor = code --wait
