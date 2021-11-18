@@ -7,16 +7,16 @@
 	unassume = update-index --no-assume-unchanged
 	assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 	praise = blame
-[diff]
-  tool = default-difftool
+[merge]
+	tool = opendiff
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [push]
 	default = simple
 [user]
 	name = Patrick Wiseman
-	email = patrick@deft.services
-	signingkey = 041AC406E6E86DFD
+	email = patrick@flowerwork.io
+	signingkey = DACE9B0734C24550
 [hub]
 	protocol = ssh
 [commit]
@@ -25,3 +25,12 @@
 	helper = osxkeychain
 [core]
 	editor = code --wait
+	excludesfile = /Users/thephw/.gitignore_global
+[gpg]
+	program = gpg
+[pull]
+	rebase = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[init]
+	defaultBranch = main
