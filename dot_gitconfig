@@ -12,7 +12,7 @@
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [push]
-	default = simple
+	default = current
 [user]
 	name = Patrick Wiseman
 	email = patrick@flowerwork.io
