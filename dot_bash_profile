@@ -66,3 +66,5 @@ export PLATFORM_HOST=thephw.flowerwork.dev
 
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+export PATH="$PATH:/Users/thephw/.local/bin" # Python

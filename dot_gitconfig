@@ -15,22 +15,29 @@
 	default = current
 [user]
 	name = Patrick Wiseman
-	email = patrick@flowerwork.io
-	signingkey = DACE9B0734C24550
-[hub]
-	protocol = ssh
+	email = patrick@deft.services
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICBeMVznRqEcY8sYBZ7SWtBUwWG47iMD6TU/TBTPY5Bl
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
 	gpgsign = true
-[credential]
-	helper = osxkeychain
 [core]
 	editor = code --wait
 	excludesfile = /Users/thephw/.gitignore_global
-[gpg]
-	program = gpg
 [pull]
 	rebase = true
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
 [init]
 	defaultBranch = main
+[rebase]
+	autosquash = true
+	autostash = true
+[rerere]
+	enabled = true
+[url "git@github.com:"]
+	insteadOf = "gh"
+[diff]
+	algorithm = histogram
+[branch]
+	sort = -committerdate
