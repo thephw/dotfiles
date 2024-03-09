@@ -67,4 +67,8 @@ export PLATFORM_HOST=thephw.flowerwork.dev
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-export PATH="$PATH:/Users/thephw/.local/bin" # Python
+# Python
+export PATH="$PATH:/Users/thephw/.local/bin"
+
+# Ruby -- fix for pg (https://github.com/ged/ruby-pg/issues/538)
+export PGGSSENCMODE="disable"
