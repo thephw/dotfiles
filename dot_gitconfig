@@ -36,7 +36,7 @@
 [rerere]
 	enabled = true
 [url "git@github.com:"]
-	insteadOf = "gh"
+	insteadOf = "gh:"
 [diff]
 	algorithm = histogram
 [branch]
