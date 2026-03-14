@@ -72,3 +72,7 @@ export PATH="$PATH:/Users/thephw/.local/bin"
 
 # Ruby -- fix for pg (https://github.com/ged/ruby-pg/issues/538)
 export PGGSSENCMODE="disable"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# jj autocomplete
+source <(jj util completion bash)
