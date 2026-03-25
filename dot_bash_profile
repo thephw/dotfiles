@@ -28,11 +28,7 @@ complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9
 # Setup options for asdf plugins
 export KERL_BUILD_DOCS=yes # Enables building erlang with documentation
 
-# PATH updates
-export PATH="./bin:$PATH" # Add project binaries to the path
-export PATH="$HOME/bin:$PATH" # Add person binaries to the path
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+
 
 # Configure bash
 export EDITOR='code --wait'
@@ -67,12 +63,19 @@ export PLATFORM_HOST=thephw.flowerwork.dev
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# Python
-export PATH="$PATH:/Users/thephw/.local/bin"
-
 # Ruby -- fix for pg (https://github.com/ged/ruby-pg/issues/538)
 export PGGSSENCMODE="disable"
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Set gopath
+export GOPATH=$HOME/go
+
+# PATH updates
+export PATH="./bin:$PATH" # Add project binaries to the path
+export PATH="$HOME/bin:$PATH" # Add personal binaries to the path
+export PATH=$PATH:$GOPATH/bin # Add go binaries to path
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH" # Add homebrew libpq fix
+export PATH="$HOME/.asdf/shims:$PATH" # Add asdf shimm
+export PATH="$PATH:/$HOME/.local/bin" # Add personal binaries
 
 # jj autocomplete
 source <(jj util completion bash)
