@@ -50,15 +50,15 @@ alias kc='kubectl'
 alias kx='kubectx'
 alias kn='kubens'
 alias ll="ls -l"
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
 
 source ~/functions.sh
-source ~/.ssh/secrets
+# source ~/.ssh/secrets
 
 # FLOWERWORK_CLUSTERS_VERSION=0.0.1
-CLUSTERS_DIR="$HOME/clusters"
-mkdir -p "$CLUSTERS_DIR"
-export KUBECONFIG="$(ls $CLUSTERS_DIR/*.{yml,yaml} | tr "\n" ":")$HOME/.kube/config"
+# CLUSTERS_DIR="$HOME/clusters"
+# mkdir -p "$CLUSTERS_DIR"
+# export KUBECONFIG="$(ls $CLUSTERS_DIR/*.{yml,yaml} | tr "\n" ":")$HOME/.kube/config"
 # FLOWERWORK_CLUSTERS_END
 
 # Flowerwork platform
