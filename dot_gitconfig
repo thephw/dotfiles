@@ -8,14 +8,14 @@
 	assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 	praise = blame
 [merge]
-	tool = opendiff
+	tool = vscode
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [push]
 	default = current
 [user]
 	name = Patrick Wiseman
-	email = patrick@deft.services
+	email = patrick@orderlymeds.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICBeMVznRqEcY8sYBZ7SWtBUwWG47iMD6TU/TBTPY5Bl
 [gpg]
 	format = ssh
@@ -41,3 +41,5 @@
 	algorithm = histogram
 [branch]
 	sort = -committerdate
+[mergetool "vscode"]
+    cmd = "code --wait --merge    "

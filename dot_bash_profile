@@ -76,6 +76,7 @@ export PATH=$PATH:$GOPATH/bin # Add go binaries to path
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH" # Add homebrew libpq fix
 export PATH="$HOME/.asdf/shims:$PATH" # Add asdf shimm
 export PATH="$PATH:/$HOME/.local/bin" # Add personal binaries
+export PATH="$PATH:/Users/thephw/.lmstudio/bin"
 
 # jj autocomplete
 source <(jj util completion bash)
