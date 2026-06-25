@@ -11,5 +11,7 @@ brew "tldr"
 brew "chezmoi"
 brew "jj"
 brew "asdf"
-brew "claude"
-brew "claude-code"
+
+# Anthropic Claude apps (homebrew/cask, no tap required)
+cask "claude"
+cask "claude-code"
