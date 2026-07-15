@@ -1,0 +1,8 @@
+Host *
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Host plex-nas
+    HostName 100.64.87.33
+    User thephw
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/PatchNAS.pub
