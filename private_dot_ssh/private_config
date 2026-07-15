@@ -1,19 +1,19 @@
 Host *
 	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
-Host nas
+Host nas nas.thephw.com
     HostName nas.thephw.com
     User thephw
     IdentitiesOnly yes
     IdentityFile ~/.ssh/PatchNAS.pub
 
-Host homeassistant
+Host homeassistant ha.thephw.com
     HostName ha.thephw.com
-    User thephw
+    User root
     IdentitiesOnly yes
     IdentityFile ~/.ssh/HomeAssistant.pub
 
-Host plex
+Host plex plex.thephw.com
     HostName plex.thephw.com
     User thephw
     IdentitiesOnly yes
